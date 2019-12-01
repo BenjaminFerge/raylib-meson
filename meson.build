@@ -1,5 +1,5 @@
 project('raylib', 'c',
-	version : '2.0.1-alpha',
+	version : '2.5.0',
 	license: 'Zlib'
 )
 
@@ -132,7 +132,7 @@ raylib_sources = [
 
 raylib_dependencies = [glfw_dep, glfw_dependencies]
 
-raylib_inc = include_directories('raylib/src', 'raylib/src/external/glfw/deps')
+raylib_inc = include_directories('raylib/src', 'raylib/src/external', 'raylib/src/external/glfw/deps', 'raylib/src/external/ANGLE', 'raylib/src/external/android/native_app_glue')
 raylib_lib = static_library('raylib', raylib_sources,
 	dependencies: raylib_dependencies,
 	include_directories: raylib_inc
