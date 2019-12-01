@@ -132,7 +132,7 @@ raylib_sources = [
 
 raylib_dependencies = [glfw_dep, glfw_dependencies]
 
-raylib_inc = include_directories('raylib/src')
+raylib_inc = include_directories('raylib/src', 'raylib/src/external/glfw/deps')
 raylib_lib = static_library('raylib', raylib_sources,
 	dependencies: raylib_dependencies,
 	include_directories: raylib_inc
